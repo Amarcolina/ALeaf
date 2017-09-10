@@ -12,7 +12,7 @@ public class GameState : IDisposable {
 
   public const float POD_SPAWN_CHANCE = 0.04f;
 
-  public const int TURN_AMOUNT = 3;
+  public const int TURN_AMOUNT = 6;
   public const int TABLE_LENGTH = 360 / TURN_AMOUNT;
 
   public const float MIN_POD_SPEED = 0.025f;
@@ -113,7 +113,7 @@ public class GameState : IDisposable {
         Position.y -= Speed * multiplier;
         return false;
       } else {
-        Position.y += Speed * multiplier;
+        Position.y += 3 * Speed * multiplier;
         return Position.y > HEIGHT / 2;
       }
     }
@@ -122,7 +122,7 @@ public class GameState : IDisposable {
   private static Queue<GameState> _statePool = new Queue<GameState>();
 
   public LeafState Leaf;
-  
+
   public int PodCount = 0;
   public int Points = 0;
   public int Frame = 0;

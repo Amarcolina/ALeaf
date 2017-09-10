@@ -80,8 +80,8 @@ public class IncrementalPlayer : IPlayer {
     toUse.Step(replace);
 
     for (int i = replaceIndex + 1; i < _path.Count; i++) {
+      _alternatePaths.Add(toUse.Leaf.Position);
       toUse.Step(_path[i]);
-
       _alternatePaths.Add(toUse.Leaf.Position);
     }
 
@@ -151,14 +151,15 @@ public class IncrementalPlayer : IPlayer {
       }
     }
 
-    Gizmos.color = Color.green;
+    Gizmos.color = new Color(0, 0, 1, 0.05f);
+    for (int i = 1; i < _alternatePaths.Count; i += 2) {
+      Gizmos.DrawLine(_alternatePaths[i], _alternatePaths[i - 1]);
+    }
+
+    Gizmos.color = new Color(0, 1, 0, 0.2f);
     for (int i = 1; i < _gizmoPath.Count; i++) {
       Gizmos.DrawLine(_gizmoPath[i - 1], _gizmoPath[i]);
     }
 
-    Gizmos.color = Color.blue;
-    for (int i = 0; i < _alternatePaths.Count; i++) {
-      Gizmos.DrawWireCube(_alternatePaths[i], Vector3.one * 0.05f);
-    }
   }
 }
