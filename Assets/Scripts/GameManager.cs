@@ -141,20 +141,23 @@ public class GameManager : MonoBehaviour {
     //_player.OnDrawGizmos();
   }
 
+  public bool drawGizmos = false;
   void OnDrawGizmos() {
-    /*
-    for (float dx = -2; dx <= 2; dx += 0.05f) {
-      for (float dy = -2; dy <= 2; dy += 0.05f) {
-        Vector2 pos = _state.Leaf.Position + new Vector2(dx, dy);
-        if (!_state.DoesHitCapsule(pos)) {
-          Gizmos.DrawWireCube(pos, Vector3.one * 0.05f);
+    if (drawGizmos) {
+      /*
+      for (float dx = -2; dx <= 2; dx += 0.05f) {
+        for (float dy = -2; dy <= 2; dy += 0.05f) {
+          Vector2 pos = _state.Leaf.Position + new Vector2(dx, dy);
+          if (!_state.DoesHitCapsule(pos)) {
+            Gizmos.DrawWireCube(pos, Vector3.one * 0.05f);
+          }
         }
       }
-    }
-    */
+      */
 
-    if (_player != null) {
-      _player.OnDrawGizmos();
+      if (_player != null) {
+        _player.OnDrawGizmos();
+      }
     }
   }
 }

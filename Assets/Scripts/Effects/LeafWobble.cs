@@ -12,6 +12,8 @@ public class LeafWobble : MonoBehaviour {
   [SerializeField]
   private Transform _toRotate;
 
+  public bool enableWobble = false;
+
   private Quaternion _rot;
   private Vector3 _smoothedPos;
 
@@ -20,9 +22,14 @@ public class LeafWobble : MonoBehaviour {
 
   private float noisePos = 0;
 
-  void Update () {
+  void Update() {
     _smoothedPos += (_toFollow.position - _smoothedPos) / 1.2f;
     transform.position = _smoothedPos;
+
+    if (!enableWobble) {
+      _toRotate.rotation = _toFollow.rotation;
+      return;
+    }
 
     float vel = Vector2.Distance(transform.position, _prevPos);
     _smoothVel += (vel - _smoothVel) / 5.0f;
