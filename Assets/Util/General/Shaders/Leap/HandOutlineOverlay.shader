@@ -1,4 +1,6 @@
-﻿Shader "HandyMan/Hands/HandOutlineOverlay" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "HandyMan/Hands/HandOutlineOverlay" {
 
 	/* Renders a nice outline around a mesh using the stencil buffer
 	 * works a lot nicer than using extruded meshes alone, line how
@@ -32,7 +34,7 @@
 	//Hand extruded by _Radius amount, used to mask the outline
 	v2f vertHandRadius(appdata v) {
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 
 		float3 norm   = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal);
 		float2 offset = TransformViewToProjection(norm.xy);
@@ -45,7 +47,7 @@
 	//Hand extruded by (_Radius + _Outline) amount, used when drawing the outline
 	v2f vertOutline(appdata v) {
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 
 		float3 norm   = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal);
 		float2 offset = TransformViewToProjection(norm.xy);

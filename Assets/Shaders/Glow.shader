@@ -1,4 +1,6 @@
-﻿Shader "ALeaf/Glow" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "ALeaf/Glow" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 	}
@@ -13,7 +15,7 @@
 
   fragment_input vert(appdata_img v) {
 		fragment_input o;
-		o.position = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.position = UnityObjectToClipPos(v.vertex);
 		o.uv = v.texcoord;
 		return o;
 	}

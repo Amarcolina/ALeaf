@@ -1,4 +1,6 @@
-﻿Shader "HandyMan/General/CircleShader" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "HandyMan/General/CircleShader" {
 
 	/* Renders a circle across UV coordinates based on a texture ramp
 	 * This allows the circle to be scaled without modifying the
@@ -27,7 +29,7 @@
 
 	fragment_input vert(appdata_img v) {
 		fragment_input o;
-		o.position = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.position = UnityObjectToClipPos(v.vertex);
 		o.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, v.texcoord);
 		return o;
 	}

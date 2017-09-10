@@ -1,4 +1,6 @@
-﻿Shader "ALeaf/Downsample" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "ALeaf/Downsample" {
   Properties { _MainTex ("", any) = "" {} }
   CGINCLUDE
   #include "UnityCG.cginc"
@@ -13,7 +15,7 @@
 
   v2f vert( appdata_img v ) {
     v2f o; 
-    o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+    o.pos = UnityObjectToClipPos(v.vertex);
 
     o.taps[0] = v.texcoord + float2(0, 0);
     o.taps[1] = v.texcoord + float2(_MainTex_TexelSize.x, 0);

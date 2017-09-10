@@ -1,4 +1,6 @@
-﻿Shader "HandyMan/Passthrough/BlueThreshold" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "HandyMan/Passthrough/BlueThreshold" {
 	Properties {
 		_MinThreshold    ("Min Threshold", Float) = 0.2
 		_MaxThreshold    ("Max Threshold", Float) = 0.3
@@ -34,7 +36,7 @@
 
 		frag_in vert(appdata_img v){
 			frag_in o;
-			o.position = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.position = UnityObjectToClipPos(v.vertex);
 			o.screenPos = ComputeScreenPos(o.position);
 			return o;
 		}
