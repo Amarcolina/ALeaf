@@ -1,0 +1,321 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &119156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444848}
+  - 33: {fileID: 3355738}
+  - 64: {fileID: 6479378}
+  - 23: {fileID: 2301102}
+  m_Layer: 0
+  m_Name: Quad2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &163612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473006}
+  - 114: {fileID: 11449918}
+  m_Layer: 0
+  m_Name: PinchCircle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &189044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461078}
+  - 33: {fileID: 3366808}
+  - 64: {fileID: 6496014}
+  - 23: {fileID: 2345530}
+  m_Layer: 0
+  m_Name: Quad1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &444848
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473006}
+  m_RootOrder: 1
+--- !u!4 &461078
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473006}
+  m_RootOrder: 0
+--- !u!4 &473006
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.72993481, y: 1.29005361, z: -.512110472}
+  m_LocalScale: {x: .0799999982, y: .0799999982, z: .0799999982}
+  m_Children:
+  - {fileID: 461078}
+  - {fileID: 444848}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2301102
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119156}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 338e691463814534fa018e33848f3b42, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &2345530
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189044}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: cc5af547a666ada4f8be7d288d82b0c8, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3355738
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119156}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &3366808
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189044}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &6479378
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &6496014
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11449918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4116b1bc31946bb498fcf18767a0b171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle1Lerp:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .59738332
+      value: .983718395
+      inSlope: .0117060104
+      outSlope: .0117060104
+      tangentMode: 0
+    - time: 1.00012112
+      value: .79391855
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  circle1: {fileID: 2345530}
+  circle2Lerp:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: .00120481919
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .522604108
+      value: .0273340344
+      inSlope: .126651898
+      outSlope: .126651898
+      tangentMode: 0
+    - time: .765664816
+      value: .199598014
+      inSlope: .117981672
+      outSlope: .117981672
+      tangentMode: 0
+    - time: 1.00164533
+      value: .106251955
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  circle2: {fileID: 2301102}
+  animationInTime: .150000006
+  animationOutTime: .300000012
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: circle1Lerp.m_Curve.Array.data[2].time
+      value: 1.00012112
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle1Lerp.m_Curve.Array.data[2].value
+      value: .79391855
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle1Lerp.m_Curve.Array.data[1].value
+      value: .983718395
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle1Lerp.m_Curve.Array.data[1].time
+      value: .59738332
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle1Lerp.m_Curve.Array.data[1].inSlope
+      value: .0117060104
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle1Lerp.m_Curve.Array.data[1].outSlope
+      value: .0117060104
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[3].value
+      value: .106251955
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[3].time
+      value: 1.00164533
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[2].value
+      value: .199598014
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[2].time
+      value: .765664816
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[1].value
+      value: .0273340344
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[1].time
+      value: .522604108
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[1].inSlope
+      value: .126651898
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: circle2Lerp.m_Curve.Array.data[1].outSlope
+      value: .126651898
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: .0799999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: .0799999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: .0799999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: animationInTime
+      value: .150000006
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 163612}
+  m_IsPrefabParent: 1
