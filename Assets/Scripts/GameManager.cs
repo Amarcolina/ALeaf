@@ -17,7 +17,8 @@ public enum PlayerType {
   Dijkstra,
   Incremental_20,
   Incremental_30,
-  Incremental_40
+  Incremental_40,
+  Incremental_40_Bugged
 }
 
 public static class PlayerTypeExtension {
@@ -44,11 +45,13 @@ public static class PlayerTypeExtension {
       case PlayerType.Dijkstra:
         return new DijkstraPlayer(1000);
       case PlayerType.Incremental_20:
-        return new IncrementalPlayer(20);
+        return new IncrementalPlayer(20, 2);
       case PlayerType.Incremental_30:
-        return new IncrementalPlayer(30);
+        return new IncrementalPlayer(30, 2);
       case PlayerType.Incremental_40:
-        return new IncrementalPlayer(40);
+        return new IncrementalPlayer(40, 2);
+      case PlayerType.Incremental_40_Bugged:
+        return new IncrementalPlayer(40, 1);
       default:
         throw new Exception("Unexpected Player Type!");
     }

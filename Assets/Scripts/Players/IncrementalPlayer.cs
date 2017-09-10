@@ -22,8 +22,10 @@ public class IncrementalPlayer : IPlayer {
   private GameState _tempState2 = new GameState();
   private GameState _tempState3 = new GameState();
 
-  public IncrementalPlayer(int maxPathLength) {
+  private int _offset;
+  public IncrementalPlayer(int maxPathLength, int offset) {
     _maxPathLength = maxPathLength;
+    _offset = offset;
   }
 
   public GameState.Move GetMove(GameState currState) {
@@ -39,7 +41,7 @@ public class IncrementalPlayer : IPlayer {
     _path.RemoveAt(0);
     return moveToMake;
   }
-
+  
   private void doIncrementalModifications(GameState currState, double currCost) {
     _alternatePaths.Clear();
 
@@ -50,7 +52,7 @@ public class IncrementalPlayer : IPlayer {
       double alternateCostB;
 
       GameState.Move alternateMoveA = (GameState.Move)(((int)_path[i] + 1) % 3);
-      GameState.Move alternateMoveB = (GameState.Move)(((int)_path[i] + 1) % 3);
+      GameState.Move alternateMoveB = (GameState.Move)(((int)_path[i] + _offset) % 3);
 
       alternateCostA = costOfAlternatePath(_tempState1, i, alternateMoveA, _tempState2);
       alternateCostB = costOfAlternatePath(_tempState1, i, alternateMoveB, _tempState3);

@@ -12,7 +12,7 @@ public class GameState : IDisposable {
 
   public const float POD_SPAWN_CHANCE = 0.04f;
 
-  public const int TURN_AMOUNT = 6;
+  public const int TURN_AMOUNT = 3;
   public const int TABLE_LENGTH = 360 / TURN_AMOUNT;
 
   public const float MIN_POD_SPEED = 0.025f;
